@@ -207,3 +207,82 @@ rotatedK(2);
     console.log(RotateArray);
 
 })(3)
+
+//ARROW FUNCTIONS
+//SECOND
+//PRINT ODD IN AN ARRAY
+
+let Arrays=[1,2,4,11,50,6,71];
+ let printOdd=(arr)=>{
+    let odd=arr.filter((item)=>item %2==1)
+    console.log(odd);
+
+ }
+printOdd(Arrays)
+
+//PRINT CAPITAL OF STRINGS
+let StringArray=["aDarsh","AVANI","AjmaL","DRIsHya"];
+let UPPER=(Arr)=>{
+    Arr.map(s=>{
+        console.log(s.toUpperCase());
+    })
+}
+UPPER(StringArray);
+
+//SUM OF ALL NUMBERS IN AN ARRAY
+let numbers=[1,3,4,66,7,9];
+let sum=0
+let sumOfarray=(arr)=>{
+    arr.map(s=>{
+         
+        sum=s+sum;
+    })
+    console.log(sum);
+}
+sumOfarray(numbers)
+
+//PRIME NUMBERS IN ANA ARRAY
+let Pnumbers=[2,7,6,9,11,15,21];
+
+let prime=(arr)=>{
+    arr.map(s=>{
+        if(s!=2 && s%2 != 0){
+            let flag=true
+             for(i=3;i<Math.floor(s/2);i++){
+                 if(s%i==0) flag =false;
+             }
+             if(flag) console.log(s);
+        }
+        else if(s==2) console.log(s);
+    } )      
+}
+prime(Pnumbers); 
+
+//PALIANDROME IN ARRAY
+
+let array3=["malayalam","pop","hai","level"];
+let flag;
+let FindPlaindrome=()=>{
+    array3.map(s=>{
+        let elements=s.split("");
+        
+        let reverseElements=elements.reverse();
+        
+        for(i=0;i<elements.length;i++){
+            flag=true;
+            
+              if(elements[i] != reverseElements[elements.length-[i+1]]){
+                  flag=false
+              }
+            }
+            if(flag) console.log(s);
+          })
+
+    }
+
+
+FindPlaindrome()
+
+
+
+
